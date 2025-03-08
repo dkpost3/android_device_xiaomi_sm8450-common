@@ -4,6 +4,15 @@
 -->
 <manifest version="1.0" type="device">
     <hal format="hidl">
+        <name>vendor.qti.hardware.embmssl</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IEmbms</name>
+            <instance>embmsslServer0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>com.fingerprints.extension</name>
         <transport>hwbinder</transport>
         <version>3.0</version>
@@ -40,6 +49,53 @@
         <version>1.0</version>
         <interface>
             <name>IMiFxTunnel</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.media.c2</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IComponentStore</name>
+            <instance>dolby</instance>
+        </interface>
+    </hal>
+    <!--  Eid service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.eid</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IEid</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- Trusted UI HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.trustedui</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::ITrustedUI/default</fqname>
+        <fqname>@1.2::ITrustedUI/qtee-vm</fqname>
+        <fqname>@1.1::ITrustedInput/default</fqname>
+        <fqname>@1.1::ITrustedInput/qtee-vm</fqname>
+    </hal>
+    <!--TuiComm-->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.tui_comm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITuiComm</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.dolby.hardware.dms</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IDms</name>
             <instance>default</instance>
         </interface>
     </hal>
