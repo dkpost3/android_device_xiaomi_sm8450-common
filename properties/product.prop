@@ -1,3 +1,9 @@
 # Audio
 audio.offload.min.duration.secs=30
 media.stagefright.audio.deep=false
+
+# ESIM
+ro.vendor.radio.features_common=3
+
+# Allow users to retain eSIM profiles after factory reset of user data
+masterclear.allow_retain_esim_profiles_after_fdr=true
