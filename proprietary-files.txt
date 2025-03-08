@@ -44,7 +44,13 @@ vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so;DISABLE_CHECKELF
 
 # Audio soundfx
 vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libmisoundfx.so
 vendor/lib64/soundfx/libshoebox.so
+
+# Audio FX modules - from qssi-user-14-UKQ1.230924.001-1702916091049-release-keys
+vendor/lib64/soundfx/libqcbassboost.so|e655270002aef6e9eb79774b16d2cda408fc3be8
+vendor/lib64/soundfx/libqcreverb.so|6365400f47e7a1f56f902884993963acd567bbdf
+vendor/lib64/soundfx/libqcvirt.so|e2cd59853b16a7d11739472085b07e90771a6dbe
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -150,6 +156,7 @@ vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.latency@2.1.so
 
 # Computer vision
+system_ext/lib64/vendor.qti.hardware.cvp@1.0.so
 vendor/etc/eva/facedetection/model3.dat
 vendor/etc/face3d/qcnn_concat_file_model-0324_2_encrypted
 vendor/lib64/libFace3DTA.so
@@ -292,7 +299,7 @@ vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libcpion.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
-vendor/lib64/libops.so
+vendor/lib64/libops.so|9b33ca1cf66aaf879dc6e9386fcc35f08324b234
 vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
 vendor/lib64/libspl.so
@@ -305,12 +312,50 @@ vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
+# EMBMS
+vendor/bin/embmsslServer
+vendor/etc/init/init.embmssl_server.rc
+vendor/lib64/libembmsservice.so
+vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
+vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
+
+# E-SIMs
+product/priv-app/EuiccGoogle/EuiccGoogle.apk
+#;PRESIGNED
+
 # ESE powermanager
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
 vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
+
+# eid
+vendor/bin/hw/vendor.qti.hardware.eid@1.0-service
+vendor/etc/init/vendor.qti.hardware.eid@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.eid@1.0.so
+
+# Trusted User Interface
+vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
+vendor/bin/trusteduilistener
+vendor/etc/init/trusteduilistener.rc
+vendor/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
+vendor/lib64/libTouchInputVM.so
+vendor/lib64/libTrustedInput.so
+vendor/lib64/libTrustedInputTZ.so
+vendor/lib64/libTrustedInputUtils.so
+vendor/lib64/libTrustedUI.so
+vendor/lib64/libTrustedUITZ.so
+vendor/lib64/libTrustedUIVM.so
+vendor/lib64/libminksocket_vendor.so
+vendor/lib64/libsi.so
+vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
+vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
+vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # FM
 vendor/etc/init.qti.fm.sh
@@ -411,7 +456,7 @@ vendor/lib64/libllvm-qgl.so
 vendor/lib64/hw/vulkan.adreno.so
 
 # Hotword Enrollment
-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk
+product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk
 product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
@@ -440,48 +485,64 @@ vendor/etc/permissions/android.hardware.hardware_keystore.xml:vendor/etc/permiss
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/lib64/libqtikeymint.so
 
+# Listen
+vendor/lib64/libeai_fixed.so
+vendor/lib64/libeai_float.so
+vendor/lib64/liblistensoundmodel2vendor.so
+vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
+
 # Media
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
+vendor/etc/kvh2xml.xml
+vendor/etc/media_codecs_with_dolby_diwali.xml
 vendor/etc/media_cape/video_system_specs.json
-vendor/etc/media_codecs_c2_audio.xml
-vendor/etc/media_codecs_cape.xml
 vendor/etc/media_codecs_diwali_v0.xml
 vendor/etc/media_codecs_diwali_v1.xml
 vendor/etc/media_codecs_diwali_v2.xml
-vendor/etc/media_codecs_performance_cape.xml
 vendor/etc/media_codecs_performance_diwali_v0.xml
 vendor/etc/media_codecs_performance_diwali_v1.xml
 vendor/etc/media_codecs_performance_diwali_v2.xml
-vendor/etc/media_codecs_performance_taro.xml
-vendor/etc/media_codecs_performance_ukee.xml
-vendor/etc/media_codecs_taro.xml
-vendor/etc/media_codecs_ukee.xml
 vendor/etc/media_diwali_v0/video_system_specs.json
 vendor/etc/media_diwali_v1/video_system_specs.json
 vendor/etc/media_diwali_v2/video_system_specs.json
-vendor/etc/media_profiles_cape.xml
 vendor/etc/media_profiles_diwali_v0.xml
 vendor/etc/media_profiles_diwali_v1.xml
 vendor/etc/media_profiles_diwali_v2.xml
+vendor/etc/media_codecs.xml
+vendor/etc/media_codecs_cape.xml
+vendor/etc/media_codecs_cape_vendor.xml
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/media_codecs_google_video.xml
+vendor/etc/media_codecs_google_video_le.xml
+vendor/etc/media_codecs_performance_cape.xml
+vendor/etc/media_codecs_performance_cape_vendor.xml
+vendor/etc/media_codecs_performance_taro.xml
+vendor/etc/media_codecs_performance_taro_vendor.xml
+vendor/etc/media_codecs_system_default.xml
+vendor/etc/media_codecs_taro.xml
+vendor/etc/media_codecs_taro_vendor.xml
+vendor/etc/media_profiles.xml
+vendor/etc/media_profiles_V1_0.xml
+vendor/etc/media_profiles_cape.xml
 vendor/etc/media_profiles_taro.xml
-vendor/etc/media_profiles_ukee.xml
 vendor/etc/media_taro/video_system_specs.json
-vendor/etc/media_ukee/video_system_specs.json
 vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
 vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
-vendor/lib64/libAlacSwDec.so
-vendor/lib64/libApeSwDec.so
+vendor/etc/media_codecs_c2_audio.xml
+vendor/etc/media_codecs_performance_ukee.xml
+vendor/etc/media_codecs_ukee.xml
+vendor/etc/media_profiles_ukee.xml
+vendor/etc/media_ukee/video_system_specs.json
 vendor/lib64/libEvrcSwCodec.so
-vendor/lib64/libFlacSwDec.so
 vendor/lib64/libQcelp13SwCodec.so
-vendor/lib64/libdsd2pcm.so
 vendor/lib64/libqc2audio_base.so
 vendor/lib64/libqc2audio_basecodec.so
 vendor/lib64/libqc2audio_core.so
@@ -506,6 +567,24 @@ vendor/lib64/libqcodec2_v4l2codec.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
 
+# OMX
+vendor/lib/libplatformconfig.so
+vendor/lib/libAlacSwDec.so
+vendor/lib/libApeSwDec.so
+vendor/lib/libFlacSwDec.so
+vendor/lib/libdsd2pcm.so
+vendor/lib/libmm-omxcore.so
+vendor/lib/libOmxCore.so
+vendor/lib/libstagefrighthw.so
+vendor/lib64/libmm-omxcore.so
+vendor/lib64/libOmxCore.so
+vendor/lib64/libstagefrighthw.so
+vendor/lib64/libAlacSwDec.so
+vendor/lib64/libApeSwDec.so
+vendor/lib64/libFlacSwDec.so
+vendor/lib64/libdsd2pcm.so
+vendor/lib64/libplatformconfig.so
+
 # Mlipay
 vendor/bin/mlipayd@1.1
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
@@ -527,7 +606,7 @@ vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/commonsysnodesconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/perfboostselection.xml
-vendor/etc/perf/perfconfigstore.xml
+vendor/etc/perf/perfconfigstore.xml|2925eaeaee4436f118b7085670df1dd45b11c5be
 vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
 vendor/etc/perf/targetsysnodesconfigs.xml
@@ -626,6 +705,7 @@ vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # RIL
+system/lib64/vendor.qti.diaghal-V1-ndk.so
 product/app/uimgbaservice/uimgbaservice.apk
 product/etc/permissions/UimGba.xml
 product/etc/permissions/UimGbaManager.xml
@@ -635,8 +715,8 @@ product/framework/uimgbamanagerlibrary.jar
 product/framework/uimservicelibrary.jar
 system_ext/app/AtFwd2/AtFwd2.apk
 system_ext/app/ImsRcsService/ImsRcsService.apk
-system_ext/app/QtiTelephony/QtiTelephony.apk
-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+system_ext/priv-app/QtiTelephony/QtiTelephony.apk;REQUIRED=QtiTelephonyCompat
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk;REQUIRED=QtiTelephonyCompat
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_permissions.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
@@ -854,9 +934,9 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 vendor/bin/hw/vendor.qti.secure_element@1.2-service
 vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
-vendor/lib64/jcos_nq_client.so
-vendor/lib64/ls_nq_client.so
-vendor/lib64/se_nq_extn_client.so
+vendor/lib64/jcos_nq_client-v1.so
+vendor/lib64/ls_nq_client-v1.so
+vendor/lib64/se_nq_extn_client-v1.so
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
@@ -923,9 +1003,6 @@ vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/libQTEEConnector_listener.so
 vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
-
-# Trusted User Interface
-vendor/lib64/libminksocket_vendor.so
 
 # VM mem
 vendor/lib/libvmmem.so
@@ -998,6 +1075,7 @@ system_ext/lib64/libwfduibcsinkinterface.so
 system_ext/lib64/libwfduibcsrc.so
 system_ext/lib64/libwfduibcsrcinterface.so
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
+system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so
 system_ext/priv-app/WfdService/WfdService.apk
 vendor/bin/wfdhdcphalservice
 vendor/bin/wfdvndservice
